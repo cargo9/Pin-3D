@@ -12,6 +12,7 @@ add_executable(pin3d
 )
 
 target_link_libraries(pin3d PRIVATE raylib)
+target_compile_definitions(pin3d PRIVATE ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets")
 
 if(MSVC)
     target_compile_options(pin3d PRIVATE /W4)
